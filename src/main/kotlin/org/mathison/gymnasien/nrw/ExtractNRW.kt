@@ -3,7 +3,7 @@ package org.mathison.gymnasien.nrw
 import org.jsoup.nodes.Document
 import org.mathison.gymnasien.Gymnasium
 
-object NRWExtractionStrategy {
+object ExtractNRW {
 
     fun apply(document: Document): List<Gymnasium> {
 

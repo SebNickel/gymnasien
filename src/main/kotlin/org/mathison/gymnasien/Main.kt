@@ -1,7 +1,6 @@
 package org.mathison.gymnasien
 
-import org.mathison.gymnasien.nrw.NRWExtractionStrategy
-import org.mathison.gymnasien.nrw.NRWFetchingStrategy
+import org.mathison.gymnasien.nrw.ScrapeNRW
 
 fun main(args: Array<String>) {
 
@@ -11,15 +10,11 @@ fun main(args: Array<String>) {
 
     }
 
-    val scraper =
+    when (args.first()) {
 
-        when (args.first()) {
+        "nrw"   -> ScrapeNRW.apply()
+        else    -> throw IllegalArgumentException("Unbekanntes Bundesland: ${args.first()}")
 
-            "nrw"   -> Scraper({ NRWFetchingStrategy.apply() }, { document -> NRWExtractionStrategy.apply(document) })
-            else    -> throw IllegalArgumentException("Unbekanntes Bundesland: ${args.first()}")
-
-         }
-
-    scraper.apply()
+     }
 
 }

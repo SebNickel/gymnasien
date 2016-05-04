@@ -1,6 +1,6 @@
 package org.mathison.gymnasien
 
-import org.mathison.gymnasien.nrw.NRWExtractionStrategy
+import org.mathison.gymnasien.nrw.ExtractNRW
 import org.testng.annotations.Test
 import java.io.File
 
@@ -15,7 +15,7 @@ class NRWExtractionStrategyTest {
 
         val document = FetchDocument.fromFile(file, baseUrl)
 
-        val gymnasien = NRWExtractionStrategy.apply(document)
+        val gymnasien = ExtractNRW.apply(document)
 
         gymnasien.forEach {
 

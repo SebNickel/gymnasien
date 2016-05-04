@@ -3,7 +3,7 @@ package org.mathison.gymnasien.nrw
 import org.mathison.gymnasien.FetchDocument
 import java.io.File
 
-object NRWFetchingStrategy {
+object FetchNRW {
 
     private val file = File("src/main/resources/nrw_liste.html")
 
