@@ -20,7 +20,7 @@ object FetchDocument {
 
     fun fromFile(file: File, baseUrl: String): Document {
 
-        val document = Jsoup.parse(file, "UTF-8", baseUrl)
+        val document = Jsoup.parse(file, "CP1252", baseUrl)
 
         return document
 
