@@ -2,6 +2,7 @@ package org.mathison.gymnasien
 
 import org.mathison.gymnasien.Hessen.HessenToCsv
 import org.mathison.gymnasien.berlin.BerlinToCsv
+import org.mathison.gymnasien.brandenburg.ScrapeBrandenburg
 import org.mathison.gymnasien.hamburg.HHToCsv
 import org.mathison.gymnasien.nrw.ScrapeNRW
 import org.mathison.gymnasien.rheinlandpfalz.ScrapeRP
@@ -18,14 +19,15 @@ fun main(args: Array<String>) {
     when (args.first()) {
 
         // TODO: Allow storing multiple email addresses for any one school.
-        "nrw"       -> ScrapeNRW.apply()
-        "saarland"  -> ScrapeSaarland.apply()
-        "rp"        -> ScrapeRP.apply()
+        "nrw"           -> ScrapeNRW.apply()
+        "saarland"      -> ScrapeSaarland.apply()
+        "rp"            -> ScrapeRP.apply()
+        "brandenburg"   -> ScrapeBrandenburg.apply()
         // TODO: Insert contents of these csvs into the DB.
-        "hh"        -> HHToCsv.apply()
-        "berlin"    -> BerlinToCsv.appy()
-        "hessen"    -> HessenToCsv.appy()
-        else        -> throw IllegalArgumentException("Unbekanntes Bundesland: ${args.first()}")
+        "hh"            -> HHToCsv.apply()
+        "berlin"        -> BerlinToCsv.appy()
+        "hessen"        -> HessenToCsv.appy()
+        else            -> throw IllegalArgumentException("Unbekanntes Bundesland: ${args.first()}")
 
      }
 

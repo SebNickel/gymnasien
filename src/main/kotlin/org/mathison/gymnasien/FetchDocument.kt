@@ -6,9 +6,11 @@ import java.io.File
 
 object FetchDocument {
 
-    fun fromUrl(url: String, baseUrl: String): Document {
+    fun fromUrl(url: String,
+                baseUrl: String,
+                timeout: Int = 3000): Document {
 
-        val connection = Jsoup.connect(url)
+        val connection = Jsoup.connect(url).timeout(timeout)
 
         val html = connection.get().html()
 
@@ -18,7 +20,8 @@ object FetchDocument {
 
     }
 
-    fun fromFile(file: File, baseUrl: String): Document {
+    fun fromFile(file: File,
+                 baseUrl: String): Document {
 
         val document = Jsoup.parse(file, "CP1252", baseUrl)
 
