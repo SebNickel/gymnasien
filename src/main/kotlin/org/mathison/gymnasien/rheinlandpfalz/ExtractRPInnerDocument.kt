@@ -13,8 +13,8 @@ object ExtractRPInnerDocument {
 
         val email =
             div
-                .select("td a:matches(.*\\(at\\))")
-                .text() //TODO
+                .select("td a:matches(\\(at\\))")
+                .text()
                 .replace("(at)das-hier-loeschen.", "@")
 
         return Gymnasium("Rheinland Pfalz", name, email)

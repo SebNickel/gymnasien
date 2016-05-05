@@ -16,6 +16,7 @@ object ExtractSaarlandDocument {
             val emailAnchors = boxDiv.select("div.link_email a")
 
             val email =
+
                 if (emailAnchors.isEmpty())
 
                     "???"

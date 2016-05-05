@@ -24,8 +24,7 @@ object ExtractNRW {
                 ergebnisTab
                     .select("a")[1]
                     .attr("href")
-                    .split("mailto:")
-                    .last()
+                    .replace("mailto:", "")
 
             Gymnasium("NRW", name, email)
 

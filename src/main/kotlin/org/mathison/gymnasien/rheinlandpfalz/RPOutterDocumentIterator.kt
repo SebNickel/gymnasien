@@ -6,7 +6,7 @@ import java.util.*
 
 class RPOutterDocumentIterator : Iterator<Document> {
 
-    private var baseUrl = "http://schulen.bildung-rp.de"
+    private val baseUrl = "http://schulen.bildung-rp.de"
 
     private var nextUrl = "http://schulen.bildung-rp.de/gehezu/startseite/liste.html?tx_wfqbe_pi1%5BSCHART%5D%5B0%5D=GY&tx_wfqbe_pi1%5Bsubmit%5D=Suchen&tx_wfqbe_pi1%5Bshowpage%5D%5B1%5D=1"
 
