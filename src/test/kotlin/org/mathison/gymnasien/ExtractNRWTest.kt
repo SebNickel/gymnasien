@@ -4,7 +4,7 @@ import org.mathison.gymnasien.nrw.ExtractNRW
 import org.testng.annotations.Test
 import java.io.File
 
-class NRWExtractionStrategyTest {
+class ExtractNRWTest {
 
     @Test
     fun test() {
