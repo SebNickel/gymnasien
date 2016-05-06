@@ -1,5 +1,6 @@
 package org.mathison.gymnasien
 
+import org.mathison.gymnasien.badenwuerttemberg.BaWüToCsv
 import org.mathison.gymnasien.hessen.HessenToCsv
 import org.mathison.gymnasien.berlin.BerlinToCsv
 import org.mathison.gymnasien.brandenburg.ScrapeBrandenburg
@@ -29,6 +30,7 @@ fun main(args: Array<String>) {
         "hh"            -> HHToCsv.apply()
         "berlin"        -> BerlinToCsv.appy()
         "hessen"        -> HessenToCsv.appy()
+        "bawü"          -> BaWüToCsv.apply()
         else            -> throw IllegalArgumentException("Unbekanntes Bundesland: ${args.first()}")
 
      }
