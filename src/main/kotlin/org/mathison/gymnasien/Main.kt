@@ -1,9 +1,10 @@
 package org.mathison.gymnasien
 
-import org.mathison.gymnasien.Hessen.HessenToCsv
+import org.mathison.gymnasien.hessen.HessenToCsv
 import org.mathison.gymnasien.berlin.BerlinToCsv
 import org.mathison.gymnasien.brandenburg.ScrapeBrandenburg
 import org.mathison.gymnasien.hamburg.HHToCsv
+import org.mathison.gymnasien.niedersachsen.ScrapeNiedersachsen
 import org.mathison.gymnasien.nrw.ScrapeNRW
 import org.mathison.gymnasien.rheinlandpfalz.ScrapeRP
 import org.mathison.gymnasien.saarland.ScrapeSaarland
@@ -23,6 +24,7 @@ fun main(args: Array<String>) {
         "saarland"      -> ScrapeSaarland.apply()
         "rp"            -> ScrapeRP.apply()
         "brandenburg"   -> ScrapeBrandenburg.apply()
+        "niedersachsen" -> ScrapeNiedersachsen.apply()
         // TODO: Insert contents of these csvs into the DB.
         "hh"            -> HHToCsv.apply()
         "berlin"        -> BerlinToCsv.appy()

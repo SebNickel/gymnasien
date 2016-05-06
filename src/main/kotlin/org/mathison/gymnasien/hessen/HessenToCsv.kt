@@ -1,4 +1,4 @@
-package org.mathison.gymnasien.Hessen
+package org.mathison.gymnasien.hessen
 
 import org.mathison.gymnasien.TxtToCsv
 
