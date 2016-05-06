@@ -9,6 +9,7 @@ import org.mathison.gymnasien.niedersachsen.ScrapeNiedersachsen
 import org.mathison.gymnasien.nrw.ScrapeNRW
 import org.mathison.gymnasien.rheinlandpfalz.ScrapeRP
 import org.mathison.gymnasien.saarland.ScrapeSaarland
+import org.mathison.gymnasien.schleswigholstein.ScrapeSH
 
 fun main(args: Array<String>) {
 
@@ -26,6 +27,7 @@ fun main(args: Array<String>) {
         "rp"            -> ScrapeRP.apply()
         "brandenburg"   -> ScrapeBrandenburg.apply()
         "niedersachsen" -> ScrapeNiedersachsen.apply()
+        "sh"            -> ScrapeSH.apply()
         // TODO: Insert contents of these csvs into the DB.
         "hh"            -> HHToCsv.apply()
         "berlin"        -> BerlinToCsv.appy()
